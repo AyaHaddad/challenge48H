@@ -1,3 +1,5 @@
+import 'axios.js'
+
 <template>
   <section>
     <h1>test recup api</h1>
