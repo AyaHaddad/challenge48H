@@ -13,7 +13,52 @@ export default class API {
     let res = await axiosAPI.get("/people");
     return res.data;
   }
-  static async getonePeople(id) {
+  static async getOnePeople(id) {
     return await axiosAPI.get("/people/" + id);
+  }
+
+  //planets
+  static async getAllPlanets() {
+    let res = await axiosAPI.get("/planets");
+    return res.data;
+  }
+  static async getOnePlanet(id) {
+    return await axiosAPI.get("/planets/" + id);
+  }
+
+  //species
+  static async getAllSpecies() {
+    let res = await axiosAPI.get("/species");
+    return res.data;
+  }
+  static async getOneSpecies(id) {
+    return await axiosAPI.get("/species/" + id);
+  }
+
+  //films
+  static async getAllFilms() {
+    let res = await axiosAPI.get("/films");
+    return res.data;
+  }
+  static async getOneFilms(id) {
+    return await axiosAPI.get("/films/" + id);
+  }
+
+  //starships
+  static async getAllStarships() {
+    let res = await axiosAPI.get("/starships");
+    return res.data;
+  }
+  static async getOneStarships(id) {
+    return await axiosAPI.get("/starships/" + id);
+  }
+
+  //vehicles
+  static async getAllVehicles() {
+    let res = await axiosAPI.get("/vehicles");
+    return res.data;
+  }
+  static async getOneVehicles(id) {
+    return await axiosAPI.get("/vehicles/" + id);
   }
 }

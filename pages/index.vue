@@ -12,9 +12,7 @@ export default {
   layout: "index",
   async asyncData() {
     let res = await api.getAllPeople();
-
     console.log(res);
-
     let people = res.results;
     return { people };
   },
