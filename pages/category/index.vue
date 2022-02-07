@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import api from "../store/api";
+import api from "../../store/api";
 
 export default {
   name: "categories",
@@ -21,32 +21,32 @@ export default {
       categories: [
         {
           name: "Species",
-          link: "species",
+          link: "category/species",
           img: "species.jpg",
         },
         {
           name: "Film",
-          link: "films",
+          link: "category/films",
           img: "films.jpg",
         },
         {
           name: "Vehicle",
-          link: "vehicles",
+          link: "category/vehicles",
           img: "vehicles.png",
         },
         {
           name: "People",
-          link: "people",
+          link: "category/people",
           img: "people.jpg",
         },
         {
           name: "Starship",
-          link: "starships",
+          link: "category/starships",
           img: "starships.jpg",
         },
         {
           name: "Planet",
-          link: "planets",
+          link: "category/planets",
           img: "planets.jpg",
         },
       ],

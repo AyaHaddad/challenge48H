@@ -4,10 +4,10 @@
       <!-- <a @click.prevent="onGoBack" href="#">
             Go back
         </a> -->
-      <h1>Category name: {{ categoryName }}</h1>
+      <h1>{{ this.slug }}</h1>
     </div>
     <div>
-      <p v-for="(item, index) of resultAPI.results" :key="index">
+      <p v-for="(item, index) of items" :key="index">
         {{ item.name || item.title }}
       </p>
     </div>
@@ -22,17 +22,15 @@
 </template>
 
 <script>
-import api from "../store/api";
+import api from "../../store/api";
 
 export default {
   name: "category",
-  async asyncData() {
-    let res = await api.getItemsFromCategory();
+  async asyncData({ params }) {
+    let res = await api.getItemsFromCategory(params.slug);
     console.log(res);
     let items = res.results;
-    return { items };
+    return { items, slug: params.slug };
   },
 };
 </script>
-onMounted(() => { categoryName.value = route.params.category; onChangePage();
-});
