@@ -1,9 +1,13 @@
 <template>
   <section>
     <h1>test recup categories</h1>
-    <p v-for="(category, index) of categories" :key="index">
+    <nuxt-link
+      v-for="(category, index) of categories"
+      :key="index"
+      :to="category.link"
+    >
       {{ category.name }}
-    </p>
+    </nuxt-link>
   </section>
 </template>
 
