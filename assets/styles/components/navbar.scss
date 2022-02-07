@@ -12,6 +12,10 @@
             margin: auto;
             font-weight: bolder;
             color: white;
+
+            &:focus, &:active, &:hover {
+                color: orange;
+            }
         }
     }
 }
