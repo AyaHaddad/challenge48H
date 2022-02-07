@@ -1,0 +1,21 @@
+@use '../theme/theme' as theme;
+
+.v-toolbar__content{
+    background-color: #14213D; 
+
+    .container {
+        max-width: 20%;
+        display: flex;
+        justify-content: center;
+
+        a {
+            margin: auto;
+            font-weight: bolder;
+            color: white;
+
+            &:focus, &:active, &:hover {
+                color: orange;
+            }
+        }
+    }
+}

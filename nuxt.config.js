@@ -21,7 +21,11 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
+<<<<<<< HEAD
   css: ["~/assets/styles/main.scss"],
+=======
+  css: ["~assets/styles/main.scss"],
+>>>>>>> alex
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],

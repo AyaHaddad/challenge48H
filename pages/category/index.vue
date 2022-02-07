@@ -12,7 +12,6 @@
       >
         <v-card
           class="v-category"
-          color="#FEF9FA"
           @click="redirect(category.link)"
           elevation="1"
         >
