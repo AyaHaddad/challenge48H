@@ -1,0 +1,31 @@
+
+@font-face {
+    font-family: "Roboto Regular";
+    src: local('~/assets/fonts/Roboto/Roboto-Regular.ttf');
+    src: url('~/assets/fonts/Roboto/Roboto-Regular.ttf');
+  }
+
+@font-face  {
+    font-family: "Roboto Bold";
+    src: local('~/assets/fonts/Roboto/Roboto-Bold.ttf');
+    src: url('~/assets/fonts/Roboto/Roboto-Bold.ttf');
+    font-weight: bold;
+  }
+
+  @font-face  {
+    font-family: 'Roboto Medium';
+    src: local("~/assets/fonts/Roboto/Roboto-Medium.ttf");
+    src: url('~/assets/fonts/Roboto/Roboto-Medium.ttf');
+  }
+
+  @font-face  {
+    font-family: 'Roboto LightItalic';
+    src: local("~/assets/fonts/Roboto/Roboto-LightItalic.ttf");
+    src: url('~/assets/fonts/Roboto/Roboto-LightItalic.ttf');
+  }
+
+//fonts variables Roboto
+$regular: 'Roboto Regular', sans-serif;
+$Bold: 'Roboto Bold', sans-serif;
+$Medium: "Roboto Medium", sans-serif;
+$LightItalic: "Roboto LightItalic", sans-serif;
