@@ -1,22 +1,22 @@
 import 'axios.js'
 
 <template>
-  <div class="hello">
-    <div :key="index" v-for="(name, index) in name">
-    <h1>{{ name.name }}</h1>
-    </div>
-  </div>
+  <section>
+    <h1>test recup api</h1>
+    <p v-for="onepeople in people" :key="onepeople.id">{{ onepeople.name }}</p>
+  </section>
 </template>
 
-
- async getallPeople() {
-    let arrayOfPeople = new Array();
-    for (let index = 1; index <= 83; index++) {
-      if (index == 17) {
-        continue;
-      }
-      let test = await axios.get("https://swapi.dev/api/people/" + index);
-      arrayOfPeople.push(test.data.name);
-    }
-    console.log(arrayOfPeople);
+<script>
+import api from "../store/api";
+export default {
+  name: "IndexPage",
+  layout: "index",
+  async asyncData() {
+    let res = await api.getAllPeople();
+    console.log(res);
+    let people = res.results;
+    return { people };
   },
+};
+</script>
