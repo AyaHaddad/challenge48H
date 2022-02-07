@@ -1,5 +1,6 @@
 <template>
   <section>
+    <Sidebar/>
     <h1>test recup api</h1>
     <p v-for="onepeople in people" :key="onepeople.id">{{ onepeople.name }}</p>
   </section>
