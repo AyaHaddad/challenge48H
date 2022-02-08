@@ -1,7 +1,20 @@
 @use '../theme/theme' as theme;
 
 .v-toolbar__content{
-    background-color: #14213D; 
+    background-color: $blue; 
+
+    .v-btn {
+        background-color: $blue !important;
+        border-radius: 10px !important;
+    
+        .v-btn__content {
+            i {
+                color: white !important;
+            }
+        }
+        
+    }
+    
 
     .container {
         width: 200px;
@@ -17,5 +30,14 @@
                 color: $yellow;
             }
         }
+    }
+}
+
+.v-navigation-drawer.v-navigation-drawer--absolute.v-navigation-drawer--is-mobile.v-navigation-drawer--open.v-navigation-drawer--temporary.theme--light {
+    height: 160px !important;
+    background-color: $blue;
+    a {
+        color: white;
+        font-family: theme.$Bold;
     }
 }

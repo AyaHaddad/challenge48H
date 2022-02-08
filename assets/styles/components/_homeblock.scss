@@ -20,6 +20,8 @@ p {
 
 .v-btn {
     background-color: $yellow !important;
+    border-radius: 10px !important;
+
     .v-btn__content {
         a {
             color: white;

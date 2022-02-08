@@ -1,7 +1,9 @@
 <template>
   <v-card>
     <v-toolbar clipped-left elevation="0">
+      
       <v-img>
+        <a href="/">
         <svg
           width="140"
           height="40"
@@ -14,15 +16,54 @@
             fill="white"
           />
         </svg>
+        </a>
       </v-img>
+      
 
       <div class="container hidden-xs-only">
         <a href="/">HOME</a>
 
-        <a href="/QuizHome">QUIZZ</a>
+        <a href="/quizHome">QUIZZ</a>
 
         <a href="/category">WIKI</a>
+      </div>
+      <div class="hidden-sm-and-up">
+        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+        <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+    >
+      <v-list>
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
+          <v-list-item>
+            <a href="/">HOME</a>
+          </v-list-item>
+
+          <v-list-item>
+            <a href="/quizHome">QUIZZ</a>
+          </v-list-item>
+
+          <v-list-item>
+            <a href="/category">WIKI</a>
+          </v-list-item>
+
+        </v-list-item-group>
+      </v-list>
+      </v-navigation-drawer>
       </div>
     </v-toolbar>
   </v-card>
 </template>
+
+<script>
+  export default {
+    data: () => ({
+      drawer: false,
+      group: null,
+    }),
+  }
+</script>
