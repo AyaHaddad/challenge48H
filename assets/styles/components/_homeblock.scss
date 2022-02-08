@@ -1,0 +1,29 @@
+@use '../theme/theme' as theme;
+
+.background {
+    background: #000 center/100vh no-repeat url("../img/home-background.jpg");
+    h1, p {
+        color: white;
+    }
+    min-height: 91.5vh;
+
+    .flex-container {
+        min-height: 91.5vh;
+    }
+
+}
+
+
+p {
+    font-weight: lighter;
+}
+
+.primaryBtn.v-btn {
+    background-color: $yellow !important;
+    .v-btn__content {
+        a {
+            color: white;
+        }
+    }
+    
+}

@@ -1,0 +1,8 @@
+@use '../theme/theme' as theme;
+
+.quizCard.v-card.theme--light {
+    box-shadow: 0 15px 25px rgb(0 0 0 / 20%);
+    border-radius: 24px;
+    backdrop-filter: blur(2px);
+    background: linear-gradient(125deg, rgb(0 0 0 / 50%) 0%, rgb(20 33 61 / 50%) 100%) !important
+}
