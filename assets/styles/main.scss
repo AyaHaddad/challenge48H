@@ -1,8 +1,11 @@
 @import "./theme/theme";
+@import "./components/_category.scss";
+@import "./components/navbar.scss";
 
 * {
     margin: 0;
-    padding: 0;
+    padding: 10px;
     text-decoration: none;
     box-sizing: border-box;
+
   }

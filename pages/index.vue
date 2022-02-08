@@ -1,7 +1,15 @@
 <template>
   <section>
-    <h1>home page</h1>
+    <Navbar />
   </section>
 </template>
 
-<script></script>
+<script>
+import api from "../store/api";
+import Navbar from "../components/Navbar.vue";
+export default {
+  components: { Navbar },
+  name: "IndexPage",
+  layout: "index",
+};
+</script>

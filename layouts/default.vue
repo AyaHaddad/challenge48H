@@ -90,8 +90,13 @@
 </template>
 
 <script>
+import Navbar from "../components/Navbar.vue";
+
 export default {
   name: "DefaultLayout",
+  components: {
+    Navbar,
+  },
   // data () {
   //   return {
   //     clipped: false,

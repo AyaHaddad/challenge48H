@@ -1,0 +1,14 @@
+@use '../theme/theme' as theme;
+
+.v-category{
+    box-shadow: none !important;
+    border-radius: 15px !important;
+    background-color: theme.$blue !important;
+}
+
+
+.v-category-title{
+    color: theme.$white;
+    font-size: 18px;
+    font-family: theme.$Bold !important;
+}

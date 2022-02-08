@@ -1,6 +1,6 @@
 import 
 <template>
-  <div>
+  <div class="ma-0 pa-0 mb-15" fluid>
     <div>
       <!-- <a @click.prevent="onGoBack" href="#">
             Go back
