@@ -9,8 +9,8 @@ const axiosAPI = axios.create({
 
 export default class API {
   //Get Items
-  static async getItemsFromCategory(categoryName) {
-    let res = await axiosAPI.get(`/${categoryName}/`);
+  static async getItemsFromCategory(categoryName, page = 1) {
+    let res = await axiosAPI.get(`/${categoryName}?page=${page}`);
     return res.data;
   }
 

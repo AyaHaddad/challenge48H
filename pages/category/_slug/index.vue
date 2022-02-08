@@ -23,6 +23,11 @@
             </v-card-text>
           </v-card>
         </v-col>
+        <div>
+          <span> Page numéro: </span>
+          <button v-if="next" @click="onNextPage">Next Page</button>
+          <button v-if="prev" @click="onPreviousPage">Previous Page</button>
+        </div>
       </v-row>
     </v-container>
   </section>
@@ -53,11 +58,18 @@ import api from "../../../store/api";
 
 export default {
   name: "category",
+  data: () => ({
+    page: 1,
+    items: [],
+  }),
+
   async asyncData({ params }) {
     let res = await api.getItemsFromCategory(params.slug);
     console.log(res);
     let items = res.results;
-    return { items, slug: params.slug };
+    let next = res.next ? true : false;
+    let prev = res.previous ? true : false;
+    return { items, slug: params.slug, next: next, prev: prev };
   },
   methods: {
     redirect(link) {
@@ -66,6 +78,19 @@ export default {
     getOnlyId(string) {
       let arrayString = string.split("/");
       return arrayString[arrayString.length - 2];
+    },
+    async onNextPage() {
+      this.page++;
+      let res = await api.getItemsFromCategory(this.slug, this.page);
+      this.next = res.next;
+      this.prev = res.previous;
+      this.items = res.results;
+    },
+    async onPreviousPage() {
+      this.page--;
+      let res = await api.getItemsFromCategory(this.slug, this.page);
+      this.prev = res.previous;
+      this.items = res.results;
     },
   },
 };
