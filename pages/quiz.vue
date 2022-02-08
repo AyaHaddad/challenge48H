@@ -39,7 +39,7 @@ export default {
       answers: [],
       test: "HI",
       quizz: {
-        title: "Voici le quizz de SWAPI",
+        title: "Voici le quizz de SWAPI v2",
         questions: [
           {
             title: "Comment ",
