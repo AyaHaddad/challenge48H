@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <Nuxt />
+    <Navbar />
     <!-- <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -90,8 +91,13 @@
 </template>
 
 <script>
+import Navbar from "../components/Navbar.vue";
+
 export default {
   name: "DefaultLayout",
+  components: {
+    Navbar,
+  },
   // data () {
   //   return {
   //     clipped: false,
