@@ -1,6 +1,7 @@
 <template>
-  <v-card>
-    <v-navigation-drawer dark v-model="drawer">
+  <v-card height="814px" width="256px">
+    <v-navigation-drawer white v-model="drawer">
+      
       <v-list dense>
         <v-list-item v-for="item in items" :key="item.title" link>
           <v-list-item-icon>
@@ -13,6 +14,7 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
+      
     </v-navigation-drawer>
   </v-card>
 </template>
