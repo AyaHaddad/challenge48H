@@ -1,6 +1,7 @@
 <template>
   <section>
     <Navbar />
+    <Sidebar />
     <v-container class="pa-10" fluid>
       <h1>Categories</h1>
       <v-row class="ma-3 flex-wrap" justify="start">
@@ -37,12 +38,10 @@
 <script>
 import api from "../../store/api";
 import Navbar from "../../components/Navbar.vue";
-
+import Sidebar from "../../components/Sidebar.vue";
 export default {
   name: "categories",
-  components: {
-    Navbar,
-  },
+  components: { Navbar, Sidebar },
   data() {
     return {
       categories: [

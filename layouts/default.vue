@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <Nuxt />
-    <Navbar />
     <!-- <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"

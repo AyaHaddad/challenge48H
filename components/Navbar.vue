@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-toolbar elevation="0">
+    <v-toolbar clipped-left elevation="0">
       <v-img>
         <svg
           width="140"
