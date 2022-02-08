@@ -16,8 +16,8 @@
         </svg>
       </v-img>
 
-      <div class="container">
-        <a href="/" class="">HOME</a>
+      <div class="container hidden-xs-only">
+        <a href="/">HOME</a>
 
         <a href="/Quizz">QUIZZ</a>
 
