@@ -1,7 +1,10 @@
 <template>
-<section>
+  <section>
     <h1 class="title">Want to test your knowledge ?</h1>
-    <p class="description">You can visit our database to find out about the different items on the star saga.ndard dummy</p>
-    <v-btn class="px-10" ><NuxtLink to="/Quiz">Quiz</NuxtLink></v-btn>
-</section>
+    <p class="description">
+      You can visit our database to find out about the different items on the
+      star saga.ndard dummy
+    </p>
+    <v-btn class="primaryBtn px-10"><NuxtLink to="/Quiz">Quiz</NuxtLink></v-btn>
+  </section>
 </template>
