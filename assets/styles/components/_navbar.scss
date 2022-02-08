@@ -10,7 +10,7 @@
 
         a {
             margin: auto;
-            font-weight: bolder;
+            font-family: theme.$Bold;
             color: white;
 
             &:focus, &:active, &:hover {
