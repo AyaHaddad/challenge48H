@@ -1,6 +1,5 @@
 <template>
   <section>
-    <Navbar />
     <div class="background hidden-xs-only">
       <div class="flex-container pa-9 d-flex flex-column justify-space-around">
         <HomeBlockWiki style="max-width: 50%" />
