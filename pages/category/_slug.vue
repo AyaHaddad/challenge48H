@@ -1,4 +1,3 @@
-import 
 <template>
   <div class="ma-0 pa-0 mb-15" fluid>
     <div>
@@ -63,6 +62,7 @@ body {
     
     background-color:white;
     box-shadow: 0px 5px 20px #555;
+    
    
     a {
      color: #333;
