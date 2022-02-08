@@ -13,6 +13,13 @@ export default class API {
     let res = await axiosAPI.get(`/${categoryName}/`);
     return res.data;
   }
+
+  //Get One Item
+  static async getOneItem(category, id) {
+    let res = await axiosAPI.get(`/${category}/${id}/`);
+    return res.data;
+  }
+
   //people
   static async getAllPeople() {
     let res = await axiosAPI.get("/people");

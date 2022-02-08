@@ -1,6 +1,9 @@
 @import "./theme/theme";
 @import "./components/_category.scss";
+@import "./components/_categoryId.scss";
 @import "./components/navbar.scss";
+@import "./pages/_quizHome.scss";
+
 
 * {
     margin: 0;
@@ -8,4 +11,9 @@
     text-decoration: none;
     box-sizing: border-box;
 
+  }
+
+  .container.v-container-category{
+    background: url( '../img/night.jpeg') no-repeat center center;
+    background-size: cover;
   }

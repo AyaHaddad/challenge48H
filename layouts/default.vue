@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <Navbar />
     <Nuxt />
     <!-- <v-navigation-drawer
       v-model="drawer"

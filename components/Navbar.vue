@@ -19,7 +19,7 @@
       <div class="container">
         <a href="/" class="">HOME</a>
 
-        <a href="/Quizz">QUIZZ</a>
+        <a href="/QuizHome">QUIZZ</a>
 
         <a href="/category">WIKI</a>
       </div>

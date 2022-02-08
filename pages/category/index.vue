@@ -1,9 +1,8 @@
 <template>
   <section>
-    <Navbar />
-    <Sidebar />
+    <!-- <Sidebar /> -->
     <v-container class="pa-10" fluid>
-      <h1>Categories</h1>
+      <h1 class="v-container-category-title py-7">Categories</h1>
       <v-row class="ma-3 flex-wrap" justify="start">
         <v-col
           v-for="(category, index) of categories"
