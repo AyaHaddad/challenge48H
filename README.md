@@ -1,69 +1,98 @@
-# Challenge48H
+# 📑 Challenge 48H
 
-## Build Setup
+This project consists in the creation of a website or an online mobile application that takes the characteristics of a Wiki accompanied by a quiz: The person will be able to see each character, each vehicle, each planet, etc. ... to learn about it, and for what is the quiz there are 14 questions that are proposed to you to answer correctly.
 
-```bash
-# install dependencies
-$ npm install
+# 📝 Instructions
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+The Home page will give you access to : 
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+- The wiki and the quiz.
 
-# generate static project
-$ npm run generate
-```
+The wiki :
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+- Will display the information you want to know.
 
-## Special Directories
+The quiz :
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+- Will display a first page with a small welcome message
 
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+- And then the questions will come afterwards as we go along
 
 
-### `pages`
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+## Expected features
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+- Management of the api propose
 
-### `plugins`
+- A mini games to learn/test the user of the site.
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+## ☝️ Prerequisites
 
-### `static`
+Before we start, we need to install packages on our 💻 terminal using the following command ``npm install``.
 
-This directory contains your static files. Each file inside this directory is mapped to `/`.
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
+## 📥 Download 
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+Let's download the project: 
 
-### `store`
+- Release version 👉 [here](https://github.com/AyaHaddad/challenge48h/archive/refs/heads/main.zip)
 
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+# 🟢 Launching 
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+Once the project is downloaded, let's launch ``Visual Studio Code``. 
+
+To launch the server, let's go to the root of the project to be able to run the following ``server`` file.
+
+In the terminal :
+
+🔹 ``npm run build``
+
+🔹 ``npm run start``
+
+Open your browser and go to:
+
+🔸 ``http://localhost:3000`` or directly [here](http://localhost:3000)
+
+# 🖥 Realization
+
+Front-End:
+
+- <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/> 
+
+- <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/> 
+
+- <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+
+Framework:
+
+- <img alt="NPM" src="https://img.shields.io/badge/npm-%2300ADD3.svg?style=for-the-badge&logo=npm&logoColor=white"/>
+
+- <img alt="Vuetify" src="https://img.shields.io/badge/vuetify-%2300ADD3.svg?style=for-the-badge&logo=vuetify&logoColor=white"/>
+
+- <img alt="NuxtJS" src="https://img.shields.io/badge/nuxtjs-%2300ADD3.svg?style=for-the-badge&logo=nuxt.js&logoColor=white"/>
+
+- <img alt="SASS" src="https://img.shields.io/badge/sass-%53.svg?style=for-the-badge&logo=sass&logoColor=white"/>
+
+- <img alt="Axios" src="https://img.shields.io/badge/axios-%53.svg?style=for-the-badge&logo=axios&logoColor=white"/>
+
+# 👥 Team
+
+Project carried out at Nantes Ynov Campus by the learners of TEAM5 (The Padawans) Computer Science 2022
+
+- Aya HADDAD aka [@AyaHaddad](https://github.com/AyaHaddad)
+
+- Alexander ROLLAND aka [@Alexanderfrite](https://github.com/Alexanderfrite)
+
+- Malo LOYER VIAUD aka [@Karrwolf](https://github.com/Karrwolf)
+
+- Nicolas SEGURA aka [@nsegur66](https://github.com/nsegur66)
+
+- Mawen CAROLE aka [@mawindu](https://github.com/mawindu)
+
+- Mathis CEBILE`` aka [@MCEBILE](https://github.com/MCEBILE)
+
+Contributions link 👉 [here](https://github.com/AYAhaddad/challenge48h/graphs/contributors).
+
+***
+*Nantes YNOV Campus - CHALLENGE 48H Informatique - 2022*
