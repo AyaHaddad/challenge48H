@@ -1,20 +1,32 @@
 <template>
   <section>
-    <v-container class="v-container-category pa-10" fluid>
-      <h1 class="v-container-category-title py-7">{{ this.slug }}</h1>
+    <v-container class="px-10 pt-10 pb-0" fluid>
+      <v-btn
+        @click="goBack"
+        color="white"
+        elevation="12"
+        large
+        rounded
+        outlined
+        class="ma-2"
+        ><v-icon left> mdi-arrow-u-left-top</v-icon>Go back
+      </v-btn>
+    </v-container>
+    <v-container class="px-10 pt-0 pb-16" fluid>
+      <h1 class="categoryHeadline text-center py-7">{{ this.slug }}</h1>
       <v-row class="ma-5 flex-wrap" justify="center">
-        <v-card class="v-category" elevation="1" width="70vw">
+        <v-card class="blurredCard" elevation="12" width="70vw">
           <v-card-text class="v-category-item px-8">
-            <h1 class="v-category-item-title py-5">
+            <h1 class="questionHeadline white--text py-5">
               {{ item.name || item.title }}
             </h1>
-            <p
-              class="v-category-item-text"
-              v-for="(value, index) of item"
-              :key="index"
-            >
-              {{ index }}: {{ value }}
-            </p>
+            <div v-for="(value, index) of item" :key="index">
+              <div class="d-flex flex-row align-center">
+                <v-chip color="white" outlined dense>{{ index }}</v-chip>
+                <p class="v-category-item-text ml-4 mb-0">{{ value }}</p>
+              </div>
+              <v-divider class="my-2" dark></v-divider>
+            </div>
           </v-card-text>
           <v-card-actions>
             <!-- <div>
@@ -61,6 +73,11 @@ export default {
     console.log(res);
     let item = res;
     return { item, slug: params.slug, id: params.id };
+  },
+  methods: {
+    goBack() {
+      this.$router.go(-1);
+    },
   },
 };
 </script>

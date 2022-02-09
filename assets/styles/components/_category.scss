@@ -6,9 +6,29 @@
     background-color: theme.$blue !important;
 }
 
+.categoryHeadline {
+    font-family: theme.$jhol;
+    color: theme.$yellow;
+    font-size: 38px;
+    text-shadow: theme.$yellow 2px 0 16px;
+}
 
-.v-category-title{
-    color: theme.$white;
-    font-size: 18px;
-    font-family: theme.$Bold !important;
+.categoryCaption {
+    font-family: theme.$jedi;
+    font-size: 20px;
+    text-shadow: theme.$yellow 2px 0 16px;
+    color: white;
+    i.v-icon {
+        color: white;
+        font-size: 28px;
+    }
+}
+
+.blurredCard.categoryCard {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.05);
+    }
 }

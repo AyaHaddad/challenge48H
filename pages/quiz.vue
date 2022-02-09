@@ -2,10 +2,15 @@
   <v-container fill-height fluid>
     <v-row align="center" justify="center">
       <v-col cols="12" sm="10" md="8" lg="6" xl="6" class="text-center">
-        <h3 class="white--text mb-4">{{ quizz.title }}</h3>
-        <v-card class="quizCard pa-6">
+        <h3
+          v-if="answers.length < quizz.questions.length"
+          class="subtitleQuiz mb-4"
+        >
+          {{ quizz.title }}
+        </h3>
+        <v-card class="blurredCard pa-6">
           <div v-if="answers.length < quizz.questions.length">
-            <h1 class="white--text mb-8">
+            <h1 class="questionHeadline white--text mb-8">
               {{ quizz.questions[currentIndex].title }}
             </h1>
             <v-row align="center" justify="center" class="pb-6">
@@ -18,6 +23,7 @@
                 color="white"
                 elevation="12"
                 large
+                block
                 rounded
                 outlined
                 class="ma-2"
@@ -33,6 +39,7 @@
                 color="white"
                 elevation="12"
                 large
+                block
                 rounded
                 outlined
                 class="ma-2"
@@ -48,6 +55,7 @@
                 color="white"
                 elevation="12"
                 large
+                block
                 rounded
                 outlined
                 class="ma-2"
@@ -63,6 +71,7 @@
                 color="white"
                 elevation="12"
                 large
+                block
                 rounded
                 outlined
                 class="ma-2"
@@ -71,10 +80,61 @@
               >
             </v-row>
           </div>
-          <div v-else>
-            <p @click="finishQuizz">CALCULER LE SCORE</p>
-            <p>Score : {{ finalScore }}/{{ quizz.questions.length }}</p>
-            <p @click="resetQuizz">Recommencer</p>
+          <div v-else class="d-flex flex-column justify-center align-center">
+            <div
+              class="tenor-gif-embed"
+              data-postid="18757177"
+              data-share-method="host"
+              data-aspect-ratio="2.06452"
+              data-width="60%"
+            >
+              <a href="https://tenor.com/view/star-wars-sable-gif-18757177"
+                >Star Wars Sable GIF</a
+              >from
+              <a href="https://tenor.com/search/star+wars-gifs"
+                >Star Wars GIFs</a
+              >
+            </div>
+            <script
+              type="text/javascript"
+              async
+              src="https://tenor.com/embed.js"
+            ></script>
+            <v-btn
+              v-if="!showResult"
+              rounded
+              large
+              elevation="12"
+              @click="finishQuizz"
+              class="primaryBtn ma-2 mt-4"
+              >Uncover your score !</v-btn
+            >
+            <v-btn
+              v-else
+              color="white"
+              large
+              rounded
+              outlined
+              disabled
+              class="ma-2 mt-4"
+              >Well done Padawan</v-btn
+            >
+            <h1 v-if="showResult" class="questionHeadline white--text mb-8">
+              Score : {{ finalScore }}/{{ quizz.questions.length }}
+            </h1>
+            <h1 v-else class="questionHeadline white--text mb-8">
+              Score : **/10
+            </h1>
+            <v-btn
+              @click="resetQuizz"
+              color="white"
+              elevation="12"
+              large
+              rounded
+              outlined
+              class="ma-2"
+              >Play again<v-icon right> mdi-reload </v-icon></v-btn
+            >
           </div>
         </v-card>
       </v-col>
@@ -86,6 +146,7 @@
 export default {
   data() {
     return {
+      showResult: false,
       finalScore: 0,
       currentIndex: 0,
       answers: [],
@@ -195,7 +256,7 @@ export default {
               },
               {
                 title: "Bowcaster",
-                isCorrect: ture,
+                isCorrect: true,
               },
             ],
           },
@@ -324,11 +385,13 @@ export default {
           this.finalScore++;
         }
       });
+      this.showResult = !this.showResult;
     },
     resetQuizz() {
       this.currentIndex = 0;
       this.answers = [];
       this.finalScore = 0;
+      this.showResult = false;
     },
   },
 };

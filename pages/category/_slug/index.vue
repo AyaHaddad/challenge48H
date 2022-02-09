@@ -1,7 +1,19 @@
 <template>
   <section>
-    <v-container class="pa-10" fluid>
-      <h1 class="v-container-category-title py-7">{{ this.slug }}</h1>
+    <v-container class="px-10 pt-10 pb-0" fluid>
+      <v-btn
+        @click="goBack"
+        color="white"
+        elevation="12"
+        large
+        rounded
+        outlined
+        class="ma-2"
+        ><v-icon left> mdi-arrow-u-left-top</v-icon>Go back
+      </v-btn>
+    </v-container>
+    <v-container class="px-10 pt-0 pb-16" fluid>
+      <h1 class="categoryHeadline text-center py-7">{{ this.slug }}</h1>
       <v-row class="ma-3 flex-wrap" justify="start">
         <v-col
           v-for="(item, index) of items"
@@ -12,47 +24,42 @@
           sm="6"
         >
           <v-card
-            class="v-category"
+            class="blurredCard categoryCard"
             @click="redirect(`/category/${slug}/${getOnlyId(item.url)}`)"
-            elevation="1"
+            elevation="12"
           >
             <v-card-text>
-              <div class="v-category-title pb-3">
-                {{ item.name || item.title }}
+              <div class="categoryCaption white--text pb-3">
+                {{ item.name || item.title
+                }}<v-icon right>mdi-chevron-right</v-icon>
               </div>
             </v-card-text>
           </v-card>
         </v-col>
-        <div>
-          <span> Page numéro: </span>
-          <button v-if="next" @click="onNextPage">Next Page</button>
-          <button v-if="prev" @click="onPreviousPage">Previous Page</button>
-        </div>
       </v-row>
+      <div class="d-flex flex-row justify-center align-center">
+        <v-btn
+          v-if="prev"
+          @click="onPreviousPage"
+          rounded
+          large
+          elevation="12"
+          class="primaryBtn ma-2 mt-4"
+          ><v-icon left>mdi-chevron-left</v-icon>Previous Page</v-btn
+        >
+        <v-btn
+          v-if="next"
+          @click="onNextPage"
+          rounded
+          large
+          elevation="12"
+          class="primaryBtn ma-2 mt-4"
+          >Next Page<v-icon right>mdi-chevron-right</v-icon></v-btn
+        >
+      </div>
     </v-container>
   </section>
 </template>
-<!-- <div class="ma-0 pa-0 mb-15" fluid>
-    <div>
-      <!-- <a @click.prevent="onGoBack" href="#">
-            Go back
-        </a> 
-      <h1>{{ this.slug }}</h1>
-    </div>
-    <div>
-      <p v-for="(item, index) of items" :key="index">
-        {{ item.name || item.title }}
-      </p>
-    </div>
-    <!-- <div>
-      <button v-if="resultAPI.previous" @click="onPreviousPage">
-        Previous
-      </button>
-      <span> Page numéro: {{ currentPage }} </span>
-      <button v-if="resultAPI.next" @click="onNextPage">Next Page</button>
-    </div> 
-  </div> -->
-
 <script>
 import api from "../../../store/api";
 
@@ -72,6 +79,9 @@ export default {
     return { items, slug: params.slug, next: next, prev: prev };
   },
   methods: {
+    goBack() {
+      this.$router.go(-1);
+    },
     redirect(link) {
       this.$router.push(link);
     },
