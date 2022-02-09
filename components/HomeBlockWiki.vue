@@ -3,8 +3,7 @@
     <v-card class="blurredCard pa-6">
       <h1 class="questionHeadline white--text">Welcome to Star Wars library</h1>
       <p class="body-1 pt-2">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy
+        All the Star Wars data you've ever wanted: Planets, Spaceships, Vehicles, People, Films and Species. From all SEVEN Star Wars films. Now with The Force Awakens data!
       </p>
       <v-btn
         rounded

@@ -24,3 +24,12 @@
     </div>
   </v-toolbar>
 </template>
+
+<script>
+  export default {
+    data: () => ({
+      drawer: false,
+      group: null,
+    }),
+  }
+</script>

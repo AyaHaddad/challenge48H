@@ -6,7 +6,7 @@
       </h1>
       <p class="body-1 pt-2">
         You can visit our database to find out about the different items on the
-        star saga.ndard dummy
+        star saga.
       </p>
       <v-btn
         rounded
