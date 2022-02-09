@@ -198,7 +198,7 @@ export default {
             ],
           },
           {
-            title: "3 Where did the Clone Wars begin ? ",
+            title: "3.Where did the Clone Wars begin ? ",
             answers: [
               {
                 title: "Tatooine",
@@ -219,7 +219,7 @@ export default {
             ],
           },
           {
-            title: '4 Who said this quote, "I choose to live for my people."',
+            title: '4.Who said this quote, "I choose to live for my people."',
             answers: [
               {
                 title: "Padmé Amidala",
@@ -240,7 +240,7 @@ export default {
             ],
           },
           {
-            title: "5 What is Chewbacca's weapon of choice ? ",
+            title: "5.What is Chewbacca's weapon of choice ? ",
             answers: [
               {
                 title: "Blaster rifle",
