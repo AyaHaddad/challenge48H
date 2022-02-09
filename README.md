@@ -26,16 +26,6 @@ The quiz :
 
 - A mini games to learn/test the user of the site.
 
-## Constraints 
-
-- Web server in **Golang**.
-
-- One **URL** per page
-
-- Database managed & administered with **SQLite**
-
-- 
-
 
 ## ☝️ Prerequisites
 
@@ -63,22 +53,6 @@ In the terminal :
 Open your browser and go to:
 
 🔸 ``http://localhost:3000`` or directly [here](http://localhost:3000)
-
-# 🔍 Architecture 
-
-The ``Forum_Project`` folder is divided into several subfolders: 
-
-* DB: Folder that gathers all the functions for the database related features. (Add a post, add a user, etc.)
-
-* Handlers: Folder that contains all the functions for the display of the site pages and the more global functions. (Creation of the cookie, verification of entries during registration, etc.)
-
-* Templates : Folder that contains the HTML (Hypertext Markup Language) pages.
-    * Layouts: Folder that contains templates used in several HTML pages. (header.html, sidebar.html)
-
-* Static : 
-    * CSS: Cascading style sheets.
-    * JavaScript : Folder that groups scripts.
-    * Images : Folder that groups images.
 
 # 🖥 Realization
 
@@ -122,5 +96,3 @@ Contributions link 👉 [here](https://github.com/AYAhaddad/challenge48h/graphs/
 
 ***
 *Nantes YNOV Campus - CHALLENGE 48H Informatique - 2022*
-
-Translated with www.DeepL.com/Translator (free version)
